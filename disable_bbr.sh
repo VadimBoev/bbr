@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ANSI escape codes for colors
-BLUE='\033[0;34m'
+CYAN='\033[0;36m'
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 NC='\033[0m' # No Color
@@ -14,7 +14,7 @@ check_bbr_enabled() {
 
 # Function to disable BBR and enable CUBIC
 disable_bbr_enable_cubic() {
-    echo -e "${BLUE}Disabling BBR and enabling CUBIC...${NC}"
+    echo -e "${CYAN}Disabling BBR and enabling CUBIC...${NC}"  # Заменили BLUE на CYAN
     
     # Remove BBR settings from sysctl.conf
     sudo sed -i '/net.core.default_qdisc=fq/d' /etc/sysctl.conf
