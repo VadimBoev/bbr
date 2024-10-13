@@ -6,13 +6,13 @@ GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 NC='\033[0m' # No Color
 
-# Function to check if BBR is enabled
+# check if BBR is enabled
 check_bbr_enabled() {
     sysctl net.ipv4.tcp_congestion_control | grep -q "bbr"
     return $?
 }
 
-# Function to enable BBR
+# enable BBR
 enable_bbr() {
     echo -e "${CYAN}Enabling BBR...${NC}"
     echo "net.core.default_qdisc=fq" | sudo tee -a /etc/sysctl.conf
@@ -21,7 +21,7 @@ enable_bbr() {
     echo -e "${GREEN}BBR has been enabled.${NC}"
 }
 
-# Main script
+# main
 if check_bbr_enabled; then
     echo -e "${ORANGE}BBR is already enabled.${NC}"
 else
