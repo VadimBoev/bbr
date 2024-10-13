@@ -6,15 +6,15 @@ GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 NC='\033[0m' # No Color
 
-# Function to check if BBR is enabled
+# check if BBR is enabled
 check_bbr_enabled() {
     sysctl net.ipv4.tcp_congestion_control | grep -q "bbr"
     return $?
 }
 
-# Function to disable BBR and enable CUBIC
+# disable BBR and enable CUBIC
 disable_bbr_enable_cubic() {
-    echo -e "${CYAN}Disabling BBR and enabling CUBIC...${NC}"  # Заменили BLUE на CYAN
+    echo -e "${CYAN}Disabling BBR and enabling CUBIC...${NC}"
     
     # Remove BBR settings from sysctl.conf
     sudo sed -i '/net.core.default_qdisc=fq/d' /etc/sysctl.conf
@@ -29,7 +29,7 @@ disable_bbr_enable_cubic() {
     echo -e "${GREEN}BBR has been disabled and CUBIC has been enabled.${NC}"
 }
 
-# Main script
+# main
 if check_bbr_enabled; then
     disable_bbr_enable_cubic
 else
