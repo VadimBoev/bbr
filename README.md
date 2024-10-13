@@ -27,6 +27,9 @@ wget -qO- https://raw.githubusercontent.com/VadimBoev/bbr/main/disable_bbr.sh | 
   
 > [!TIP]  
 > При выключении BBR устанавливается CUBIC алгоритм
+
+# Скриншот
+<img src="shell.png" alt="shell" width="700px">
   
 # Enable or disable BBR algorithm 
 This repository contains two scripts, enable_bbr.sh and disable_bbr.sh, designed to manage the BBR congestion control algorithm on Linux systems.  
@@ -57,3 +60,5 @@ wget -qO- https://raw.githubusercontent.com/VadimBoev/bbr/main/disable_bbr.sh | 
 > [!TIP]  
 > When BBR is turned off, the CUBIC algorithm is set
   
+# Screenshot
+<img src="shell.png" alt="shell" width="700px">
