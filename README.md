@@ -1,5 +1,5 @@
-# Включение или выключение BBR алгоритма
-В этом репозитории находятся два скрипта, enable_bbr.sh и disable_bbr.sh, предназначенные для управления алгоритмом управления перегрузкой BBR в Linux.
+# BBR алгоритм
+В этом репозитории два скрипта, enable_bbr.sh и disable_bbr.sh, предназначенные для включения или выключения алгоритма управления перегрузкой BBR в Linux.
   
 # Зачем нужен BBR?
 Алгоритм BBR (Bottleneck Bandwidth and Round-trip propagation time) обладает несколькими преимуществами по сравнению с традиционными механизмами управления перегрузкой:
@@ -31,8 +31,8 @@ wget -qO- https://raw.githubusercontent.com/VadimBoev/bbr/main/disable_bbr.sh | 
 # Скриншот
 <img src="shell.png" alt="shell" width="700px">
   
-# Enable or disable BBR algorithm 
-This repository contains two scripts, enable_bbr.sh and disable_bbr.sh, designed to manage the BBR congestion control algorithm on Linux systems.  
+# BBR algorithm 
+This repository contains two scripts, enable_bbr.sh and disable_bbr.sh, designed to enable or disable the BBR congestion control algorithm on Linux systems.  
   
 # Why do I need BBR?
 The BBR (Bottleneck Bandwidth and Round-trip propagation time) algorithm offers several advantages over traditional congestion control mechanisms:
