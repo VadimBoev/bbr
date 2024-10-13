@@ -1,32 +1,3 @@
-# Enable or disable BBR algorithm 
-This repository contains two scripts, enable_bbr.sh and disable_bbr.sh, designed to manage the BBR congestion control algorithm on Linux systems.  
-  
-# Why do I need BBR?
-The BBR (Bottleneck Bandwidth and Round-trip propagation time) algorithm offers several advantages over traditional congestion control mechanisms:
-- Improved Throughput: BBR is designed to maximize the available bandwidth by accurately estimating the bottleneck bandwidth and round-trip time. This leads to higher data transfer rates compared to other congestion control algorithms.
-- Lower Latency: By minimizing the amount of data in flight, BBR reduces latency, making it particularly beneficial for real-time applications like online gaming, video conferencing, and VoIP.
-- Reduced Packet Loss: BBR adapts its sending rate based on the network's capacity, which helps in reducing packet loss and retransmissions, leading to a more stable and reliable connection.
-- Efficient Resource Utilization: BBR optimizes the use of network resources by dynamically adjusting the sending rate according to the network conditions, ensuring that the network is utilized efficiently without causing congestion.
-  
-> [!NOTE]
-> Simply put, it will affect the improvement of the TCP protocol, thereby improving bandwidth and speeding up the connection.
-  
-> [!WARNING]
-> It does **NOT** affect ping!
-  
-# How to use?  
-Enable BBR:
-```
-wget -qO- https://raw.githubusercontent.com/VadimBoev/bbr/main/enable_bbr.sh | bash
-```
-Disable BBR:
-```
-wget -qO- https://raw.githubusercontent.com/VadimBoev/bbr/main/disable_bbr.sh | bash
-```
-  
-> [!TIP]  
-> When BBR is turned off, the CUBIC algorithm is set
-  
 # Включение или выключение BBR алгоритма
 В этом репозитории находятся два скрипта, enable_bbr.sh и disable_bbr.sh, предназначенные для управления алгоритмом управления перегрузкой BBR в Linux.
   
@@ -56,3 +27,33 @@ wget -qO- https://raw.githubusercontent.com/VadimBoev/bbr/main/disable_bbr.sh | 
   
 > [!TIP]  
 > При выключении BBR устанавливается CUBIC алгоритм
+  
+# Enable or disable BBR algorithm 
+This repository contains two scripts, enable_bbr.sh and disable_bbr.sh, designed to manage the BBR congestion control algorithm on Linux systems.  
+  
+# Why do I need BBR?
+The BBR (Bottleneck Bandwidth and Round-trip propagation time) algorithm offers several advantages over traditional congestion control mechanisms:
+- Improved Throughput: BBR is designed to maximize the available bandwidth by accurately estimating the bottleneck bandwidth and round-trip time. This leads to higher data transfer rates compared to other congestion control algorithms.
+- Lower Latency: By minimizing the amount of data in flight, BBR reduces latency, making it particularly beneficial for real-time applications like online gaming, video conferencing, and VoIP.
+- Reduced Packet Loss: BBR adapts its sending rate based on the network's capacity, which helps in reducing packet loss and retransmissions, leading to a more stable and reliable connection.
+- Efficient Resource Utilization: BBR optimizes the use of network resources by dynamically adjusting the sending rate according to the network conditions, ensuring that the network is utilized efficiently without causing congestion.
+  
+> [!NOTE]
+> Simply put, it will affect the improvement of the TCP protocol, thereby improving bandwidth and speeding up the connection.
+  
+> [!WARNING]
+> It does **NOT** affect ping!
+  
+# How to use?  
+Enable BBR:
+```
+wget -qO- https://raw.githubusercontent.com/VadimBoev/bbr/main/enable_bbr.sh | bash
+```
+Disable BBR:
+```
+wget -qO- https://raw.githubusercontent.com/VadimBoev/bbr/main/disable_bbr.sh | bash
+```
+  
+> [!TIP]  
+> When BBR is turned off, the CUBIC algorithm is set
+  
